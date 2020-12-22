@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.father{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			//事件冒泡：由里向外
+			// $(".father").click(function(){
+			// 	alert("father");
+			// })
+			//自动触发事件.trigger()
+			// $(".father").trigger("click");
+			// $(".father").triggerHandler("click");
+
+
+			// $(".son").on("click",function(event){
+			// 	alert("son");
+				//阻止事件冒泡
+				// return false;
+			// 	event.stopPropagation();
+			// })
+
+			//trigger 会触发事件冒泡
+			//triggerHandler 不会触发事件冒泡
+			// $(".son").trigger("click");
+			// $(".son").triggerHandler("click");
+			//a 元素的trigger 不会触发默认事件 ，需要给里边的内容加<span>标签，给span绑定事件
+			$("span").click(function(event){
+				alert("注册");
+			// 	//return false;
+			// 	event.stopPropagation();
+			})
+			$("span").trigger("click");
+			// $("span").triggerHandler("click");
+			//trigger 触发默认行为
+			//triggerHandler  不会触发默认行为
+			// $("input[type='submit']").click(function(){
+			// 	alert("34");
+			// })
+			// $("input[type='submit']").triggerHandler("click");
+		})
+	</script>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<a href="http://www.baidu.com"><span>注册</span></a>
+	<form action="http://www.taobao.com">
+		<input type="text">
+  	<input type="submit">
+	</form>
+</body>
+</html>

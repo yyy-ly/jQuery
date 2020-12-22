@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		var arr = [1,2,3,4,5];
+		var obj = {0:1,1:2,2:3,3:4,4:9,length:5};
+		/* forEach 只能遍历数组，不能遍历伪数组
+		参数：1.value 2.index 
+		*/
+		
+		arr.forEach(function(value,index){
+			console.log(index,value);
+		});
+
+		/* 利用jQuery的each方法遍历数组
+		参数：1.index 2.value
+		可以遍历伪数组 
+		*/
+
+		$.each(obj,function(index,value){
+			console.log(index,value);
+		});
+	</script>
+</head>
+<body>
+
+</body>
+</html>

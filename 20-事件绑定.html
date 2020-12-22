@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			//1.编码效率高，部分事件jQuery没有实现，所以不能添加
+			//添加多个事件，不会覆盖
+			function test1(){
+				alert("hello");
+			}
+			function test2(){
+				alert("123");
+			}
+			$("button").click(test1);
+			$("button").click(test2);
+			// $("button").mouseleave(function(){
+			// 	alert("mouseleave");
+			// })
+			// $("button").mouseenter(function(){
+			// 	alert("mouseenter");
+			// })
+
+			/* 不传参数，会移除所有事件
+			   传一个参数，会移除所有指定类型的事件
+         传两个个参数，会移除所有指定类型的指定事件*/
+			$("button").off("click",test1);
+
+			//2.编码效率低，所有js事件都可以添加
+			// $("button").on("click",function(){
+			// 	alert("jj");
+			// })
+			// $("button").on("click",function(){
+			// 	alert("234");
+			// })
+			// $("button").on("mouseleave",function(){
+			// 	alert("mouseleave");
+			// })
+			// $("button").on("mouseenter",function(){
+			// 	alert("mouseenter");
+			// })
+		})
+			
+	</script>
+</head>
+<body>
+	<button>按钮</button>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width: 80px;
+			height: 250px;
+			display: none;
+		}
+		.left{
+			float: left;
+			position: fixed;
+			left: 0;
+			top: 200px;
+
+		}
+		.right{
+			float: right;
+			position: fixed;
+			right: 0;
+			top: 200px;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			//1.监听网页的滚动
+			$(window).scroll(function(){
+			  var offset = $("html,body").scrollTop();
+				console.log(offset);
+				//获取网页滚动的偏移量
+				if(offset>=300){
+					$("img").show(500);
+				}else{
+					$("img").hide(500);
+				}
+			})
+		})
+	</script>
+</head>
+<body>
+	<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3179864259,3116298412&fm=26&gp=0.jpg" alt="" class="left">
+	<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3179864259,3116298412&fm=26&gp=0.jpg" alt="" class="right">
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</body>
+</html>

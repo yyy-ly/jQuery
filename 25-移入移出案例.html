@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 300px;
+			height: 450px;
+			margin: 50px auto;
+			border: 1px solid black;
+			
+		}
+		.box>h1{
+			font-size: 20px;
+			line-height: 35px;
+			color: deeppink;
+			padding-left: 10px;
+			border-bottom: 1px dashed #ccc;
+		}
+		ul>li{
+			list-style: none;
+			padding: 5px 10px;
+			border: 1px dashed #ccc;
+		}
+		ul>li:nth-child(-n+3) span{
+			background-color:deeppink;
+		}
+		span{
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			background-color: #ccc;
+			text-align: center;
+			margin-right: 10px;
+		}
+		.content{
+			overflow: hidden;
+			margin-top: 5px;
+			display: none;
+		}
+		.content>img{
+			width: 80px;
+			height: 120px;
+			float:left;
+		}
+		.content>p{
+			width: 180px;
+			height:120px;
+			float: right;
+			font-size: 12px;
+			line-height: 20px;
+
+		}
+		.current .content{
+			display: block;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			// $("li").mouseenter(function(){
+			// 	$(this).addClass("current");
+			// })
+			// $("li").mouseleave(function(){
+			// 	$(this).removeClass("current");
+			// })
+
+			$("li").hover(function(){
+				$(this).addClass("current");
+			},function(){
+				$(this).removeClass("current");
+			})
+		})
+	</script>
+</head>
+<body>
+	<div class="box">
+		<h1>电影排行榜</h1>
+		<ul>
+			<li><span>1</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+			<li><span>2</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+			<li><span>3</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+			<li><span>4</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+			<li><span>5</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+			<li><span>6</span>电影名称
+				<div class="content">
+					<img src="https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2624607255.webp" alt="">
+					<p>简介：经历了逃离洞穴、挺过末日危机之后的原始人咕噜家族，咕噜一家决定寻找新家园。中途盖（瑞恩·雷诺兹 Ryan Reynolds 配音）已成了咕噜一家中的一员，但让瓜哥（尼古拉斯·凯奇 Nicolas Cage 配音）头疼的是，盖跟女儿小伊（艾玛·斯通 Emma Stone 配音）每天你侬我侬，还妄想组成只属于两人的小家庭。就在咕噜一家人饥肠辘辘之际，他们发现了一片高墙内隐藏着食物丰饶的沃土，原来开辟这片世外桃源的文明人夫妇霍普和菲尔是已经去世的盖的父母的朋友。</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

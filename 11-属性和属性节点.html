@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			function Person(){
+			}
+			var p = new Person();
+			p.name = "ooo";
+			console.log(p.name);
+			p["age"] = 30;
+			console.log(p["age"]);
+			var span = document.getElementsByTagName("span")[0];
+			span.setAttribute("name","kkk");
+			console.log(span.getAttribute("name"))
+			
+	
+		})
+	</script>
+</head>
+<body>
+	<span name="pp"></span>
+</body>
+</html>

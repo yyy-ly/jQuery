@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.ad{
+			position: fixed;
+			right: 0;
+		  bottom: 0;
+			display: none;
+		}
+		.ad>img{
+			width: 250px;
+			height: 200px;
+		}
+		.ad>span{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			/* background-color:red; */
+			position: absolute;
+			top:0;
+			right: 0;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			//监听span的点击
+			$("span").click(function(){
+				$(".ad").remove();
+			})
+			//执行广告动画
+			// $(".ad").slideDown(1000,function(){
+			// 	$(".ad").fadeOut(1000,function(){
+			// 		$(".ad").fadeIn(1000)
+			// 	})
+			// })
+
+			$(".ad").stop().slideDown(1000).fadeOut(1000).fadeIn(1000);
+		})
+	</script>
+</head>
+<body>
+	<div class="ad">
+		<img src="https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/exp/w=500/sign=17f66dec4efbfbeddc59367f48f1f78e/060828381f30e924f5c060e249086e061c95f7f9.jpg" alt="">
+		<span></span>
+	</div>
+</body>
+</html>

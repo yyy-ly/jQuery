@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		//$.holdReady zan暂停ready执行
+		$.holdReady(true);
+		$(document).ready(function(){
+			alert("ready");
+		})
+
+	</script>
+</head>
+<body>
+	<button>回复ready事件</button>
+	<script>
+		var btn = document.getElementsByTagName("button")[0];
+		btn.onclick = function(){
+			$.holdReady(false);
+
+		}
+	</script>
+</body>
+</html>

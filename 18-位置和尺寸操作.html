@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.father{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position :relative;
+			margin-left:50px; 
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background-color: blue;
+			position: absolute;
+			left: 50px;
+			top: 50px;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+			var btns = document.getElementsByTagName("button");
+			//监听获取
+			btns[0].onclick = function(){
+				// console.log($(".father").width());
+				console.log($(".son").offset().left);
+				console.log($(".son").position().left);
+
+			}
+			//监听设置
+			btns[1].onclick = function(){
+				$(".father").width("500px");
+				$(".son").offset({
+					left: 10
+				})
+				//注意： position方法只能获取，不能设置
+				$(".son").position({
+					left: 100
+				})
+				$(".son").css({
+					left: "100px"
+				})
+			}
+	
+		})
+	</script>
+</head>
+<body>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	<button>获取</button>
+	<button>设置</button>
+</body>
+</html>

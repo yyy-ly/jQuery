@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			display: none;
+		}
+	</style>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		$(function(){
+
+			//show()显示
+			$("button").eq(0).click(function(){
+				// $("div").css("display","block");
+				$("div").show(1000,function(){
+					//动画执行完毕之后调用
+					alert("显示动画执行完毕");
+				});
+			})
+
+      //hide()隐藏
+			$("button").eq(1).click(function(){
+				// $("div").css("display","none");
+				$("div").hide(1000,function(){
+					//动画执行完毕之后调用
+					alert("隐藏动画执行完毕");
+				});
+			})
+			
+      //toggle() 切换
+			$("button").eq(2).click(function(){
+				$("div").toggle(1000);
+			})
+	
+		})
+	</script>
+</head>
+<body>
+	<button>显示</button>
+	<button>隐藏</button>
+	<button>切换</button>
+	<div class="box"></div>
+</body>
+</html>

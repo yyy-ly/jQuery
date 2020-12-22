@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="jquery-1.11.3/jquery.js"></script>
+	<script>
+		
+		var arr = [1,2,3,4,5];
+		var obj = {0:1,1:2,2:3,3:4,4:9,length:5};
+
+		//原生js 的map 方法
+		/* 参数：1.当前遍历到的元素
+					 2.当前遍历到的索引
+					 3.当前被遍历的数组 
+		*/
+		//不能遍历伪数组
+
+
+		// arr.map(function(value,index,array){
+		// 	console.log(value,index,array);
+		// })
+
+		// obj.map(function(value,index,array){
+		// 	console.log(value,index,array);
+		// })
+
+	 //jQuery 的map
+	 /* 第一个参数：要遍历的元素
+	    第二个参数：*/
+	 //可以遍历伪数组
+	//  $.map(arr,function(value,index){
+	// 	 console.log(index,value);
+
+	//  });
+	var res =  $.each(obj,function(index,value){
+		 console.log(index,value);
+		 return index + value;
+
+	 })
+	 var res1 = $.map(obj,function(value,index){
+		 console.log(index,value);
+		 return index + value;
+
+	 })
+	 console.log(res);//obj
+	 console.log(res1);//[]
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
